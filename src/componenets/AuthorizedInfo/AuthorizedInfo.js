@@ -160,9 +160,11 @@ class AuthorizedInfo extends Component{
         this.props.history.push("/congratulation");
     });
 
-}
+    }
 
-
+    previous=()=>{
+        this.props.history.goBack();
+    }
     render(){
         return(
             <div className="container">
