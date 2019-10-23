@@ -1,14 +1,17 @@
 import React from 'react';
 
-
+//function for input field
 const Input=(props)=>{
+
+    //to show error message when validation failed
     let formControl="form-control";
     let message='';
     if(props.touched && !props.valid)
     {
         formControl='form-control control-error';
-        message=<p className="text-danger small">*please enter {props.name} correctly.</p>;
+        message=<p className="text-danger small">*please enter {props.name.toUpperCase()} correctly.</p>;
     }
+    
     return(
         <div className="form-group">
             <label htmlFor={props.name} className="form-label">{props.title}<span className="text-danger">*</span></label>
